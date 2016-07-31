@@ -28,7 +28,9 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-
+      this.platform.resume.subscribe(() => {
+          alert('I will show ');
+      });
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       if(this.platform.is('ios')){
