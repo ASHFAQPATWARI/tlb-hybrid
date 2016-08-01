@@ -8,7 +8,7 @@ import { Page2 } from './pages/page2/page2';
 @Component({
   templateUrl: 'build/app.html'
 })
-class MyApp {
+class TlbHybrid {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Home;
@@ -49,4 +49,4 @@ class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(TlbHybrid);
