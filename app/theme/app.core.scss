@@ -10,8 +10,12 @@
 @import "../pages/home/home";
 
 @import "../pages/banner-popup/banner-popup.scss";
-
+@import "../pages/feedback/feedback.scss";
 @import "../pages/page2/page2";
+
+.p-a-0 {
+    padding: 0 !important;
+}
 
 .toolbar {
     min-height: 54px;
@@ -25,8 +29,20 @@
     font-size: 16px;
 }
 
+.f-25 {
+    font-size: 25px;
+}
+
 .nav-black {
     background-color: $nav-black;
+}
+
+.orange {
+    color: $orange;
+}
+
+.lightgrey {
+    color: $lightgrey;
 }
 
 .line-height-13 {
