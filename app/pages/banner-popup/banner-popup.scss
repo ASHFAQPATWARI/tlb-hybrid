@@ -1,3 +1,10 @@
 .banner-popup {
-
+    scroll-content {
+        background: url(../../images/banner/bannerAd.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow-y: hidden;
+    }
 }

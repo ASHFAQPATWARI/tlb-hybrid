@@ -25,8 +25,9 @@ class TlbHybrid {
       { title: 'Page dos', component: Page2, icon: '' }
     ];
 
-    setTimeout(function() {      
-      self.nav.setRoot(Home);
+    setTimeout(function() {
+      if(self.nav.getActive().name == 'BannerPopupPage')      
+        self.nav.setRoot(Home);
     }, 5000);
 
   }

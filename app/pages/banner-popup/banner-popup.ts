@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewController, NavController } from 'ionic-angular';
-
+import { Home } from '../home/home';
 /*
   Generated class for the BannerPopupPage page.
 
@@ -16,8 +16,11 @@ export class BannerPopupPage {
 
   }
 
-  close(){
-      this.view.dismiss();
+  hideBanner(){
+    if(this.nav.canGoBack())
+      this.nav.pop();
+    else
+      this.nav.setRoot(Home);
   }
 
 }
