@@ -12,6 +12,8 @@ export class searchRestaurants {
       
   }
 
+  public areaName:string = 'Sharq';
+
   showalert = () => {
     let modal = Modal.create(SelectionPopup);
     modal.onDismiss(data => {
