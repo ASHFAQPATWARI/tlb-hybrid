@@ -2,6 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { ionicBootstrap, Platform, Nav, Modal } from 'ionic-angular';
 import { StatusBar, DeviceMotion } from 'ionic-native';
 
+//providers
+import { GlobalData } from './providers/global-data/global-data';
+
 // pages
 import { Home } from './pages/home/home';
 import { BannerPopupPage } from './pages/banner-popup/banner-popup';
@@ -9,7 +12,8 @@ import { FeedbackPage } from './pages/feedback/feedback';
 import { Page2 } from './pages/page2/page2';
 
 @Component({
-  templateUrl: 'build/app.html'
+  templateUrl: 'build/app.html',
+  providers: [GlobalData]
 })
 class TlbHybrid {
   @ViewChild(Nav) nav: Nav;
@@ -29,7 +33,7 @@ class TlbHybrid {
     let self = this;
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: Home, icon: 'icon_home.png' },
+      { title: 'Home', component: Home, icon: 'icons/icon_home.png' },
       { title: 'Page dos', component: Page2, icon: '' },
       { title: 'App Feedback', component: FeedbackPage, icon: '' }
     ];

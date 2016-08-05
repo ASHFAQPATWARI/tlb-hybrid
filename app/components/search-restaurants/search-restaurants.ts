@@ -1,18 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { ViewController, Modal, NavController } from 'ionic-angular';
 import { SelectionPopup } from './../../modals/selectionPopup/selection-popup';
 
 @Component({
     selector: 'search-section',
     templateUrl: 'build/components/search-restaurants/search-restaurants.html',
+    inputs: ['areas']
 })
-export class searchRestaurants {
+export class searchRestaurants implements OnChanges  {
 
+  public areaName:string = 'Sharq';
+  public areas:any;
   constructor(private nav: NavController, private view: ViewController) {
       
   }
 
-  public areaName:string = 'Sharq';
+  ngOnInit() {
+      console.log('This if the value for user-id: ' + this.areas);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges - myProp = ' , changes['areas'].currentValue);
+  }
 
   showalert = () => {
     let modal = Modal.create(SelectionPopup);
