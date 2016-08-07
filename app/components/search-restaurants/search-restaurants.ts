@@ -15,10 +15,6 @@ export class searchRestaurants implements OnChanges  {
       
   }
 
-  ngOnInit() {
-      console.log('This if the value for user-id: ' + this.areas);
-  }
-
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges - myProp = ' , changes['areas'].currentValue);
   }
